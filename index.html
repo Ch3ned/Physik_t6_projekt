@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energieversorgung - Projektwebsite</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Energieversorgung</h1>
+        <p>Eine interaktive Lernplattform</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link" data-section="home">Startseite</a></li>
+            <li><a href="#" class="nav-link" data-section="reversible">Reversible & irreversible Vorgänge</a></li>
+            <li><a href="#" class="nav-link" data-section="entropy">Entropie & Wärmekraftwerke</a></li>
+            <li><a href="#" class="nav-link" data-section="energy-sources">Energieträger & -quellen</a></li>
+            <li><a href="#" class="nav-link" data-section="energy-village">Energiedörfer</a></li>
+            <li><a href="#" class="nav-link" data-section="personal-energy">Persönlicher Energiebedarf</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Startseite -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>Willkommen zur Energieversorgung Projektwebsite</h2>
+                <p>Entdecken Sie die faszinierende Welt der Energieumwandlung, -speicherung und -nutzung</p>
+            </div>
+
+            <div class="card">
+                <h2>Über dieses Projekt</h2>
+                <p>Diese Website wurde erstellt, um ein umfassendes Verständnis der Energieversorgung und ihrer verschiedenen Aspekte zu vermitteln. Wir behandeln folgende Themen:</p>
+                
+                <ul>
+                    <li><strong>Reversible und irreversible Vorgänge:</strong> Der Unterschied und ihre Bedeutung im Alltag</li>
+                    <li><strong>Entropie und Wärmekraftwerke:</strong> Wie Energieumwandlung funktioniert und warum Kühlung notwendig ist</li>
+                    <li><strong>Energieträger und -quellen:</strong> Primär- vs. Sekundärenergie, regenerativ vs. nicht-regenerativ</li>
+                    <li><strong>Energiedörfer:</strong> Lokale Lösungen für die Energiewende am Beispiel Wildpoldsried</li>
+                    <li><strong>Persönlicher Energiebedarf:</strong> Wie viel Energie verbrauchen wir täglich und wie können wir sparen?</li>
+                </ul>
+                
+                <p>Nutzen Sie die Navigationsleiste oben, um zwischen den verschiedenen Themenbereichen zu wechseln.</p>
+            </div>
+        </section>
+
+        <!-- Reversible und irreversible Vorgänge -->
+        <section id="reversible" class="section">
+            <div class="card">
+                <h2>Reversible und irreversible Vorgänge</h2>
+                <p>In der Thermodynamik unterscheiden wir zwischen reversiblen und irreversiblen Prozessen. Diese Unterscheidung ist grundlegend für das Verständnis von Energieumwandlungen.</p>
+                
+                <h3>Was sind reversible Vorgänge?</h3>
+                <p>Ein reversibler Prozess ist ein idealisierter Vorgang, der in beide Richtungen ablaufen kann, ohne dass dabei Energie verloren geht oder Entropie erzeugt wird. In der Praxis sind solche Prozesse nicht vollständig realisierbar, aber sie dienen als wichtiges theoretisches Modell.</p>
+                
+                <h3>Was sind irreversible Vorgänge?</h3>
+                <p>Irreversible Prozesse sind Vorgänge, die nur in eine Richtung ablaufen können und dabei Entropie erzeugen. Alle natürlichen Prozesse sind irreversibel, da immer Energie in Form von Wärme verloren geht.</p>
+                
+                <h3>Vergleichstabelle</h3>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Eigenschaft</th>
+                        <th>Reversible Vorgänge</th>
+                        <th>Irreversible Vorgänge</th>
+                    </tr>
+                    <tr>
+                        <td>Richtung</td>
+                        <td>Können in beide Richtungen ablaufen</td>
+                        <td>Laufen nur in eine Richtung ab</td>
+                    </tr>
+                    <tr>
+                        <td>Entropie</td>
+                        <td>Keine Entropieerzeugung</td>
+                        <td>Entropie wird erzeugt</td>
+                    </tr>
+                    <tr>
+                        <td>Energieverlust</td>
+                        <td>Kein Energieverlust</td>
+                        <td>Energie geht als Wärme verloren</td>
+                    </tr>
+                    <tr>
+                        <td>Beispiele</td>
+                        <td>Ideales Pendel (ohne Reibung), ideale chemische Gleichgewichte</td>
+                        <td>Verbrennungsprozesse, Wärmeleitung, Reibung</td>
+                    </tr>
+                    <tr>
+                        <td>Praktische Realisierung</td>
+                        <td>Nur näherungsweise möglich</td>
+                        <td>Alle natürlichen Prozesse</td>
+                    </tr>
+                </table>
+                
+                <h3>Beispiele aus dem Alltag</h3>
+                <p><strong>Reversible Vorgänge (annähernd):</strong></p>
+                <ul>
+                    <li>Laden und Entladen eines Akkus unter idealen Bedingungen</li>
+                    <li>Elastische Verformung (z.B. Feder)</li>
+                    <li>Idealisierte chemische Reaktionen im Gleichgewicht</li>
+                </ul>
+                
+                <p><strong>Irreversible Vorgänge:</strong></p>
+                <ul>
+                    <li>Verbrennung von Benzin im Motor</li>
+                    <li>Kochen von Wasser</li>
+                    <li>Mischen von heißem und kaltem Wasser</li>
+                    <li>Reibung (z.B. Bremsen eines Fahrrads)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entropie und Wärmekraftwerke -->
+        <section id="entropy" class="section">
+            <div class="card">
+                <h2>Entropie und Wärmekraftwerke</h2>
+                <p>Die Entropie ist ein zentrales Konzept in der Thermodynamik, das die Unumkehrbarkeit von Prozessen und die Qualität von Energie beschreibt.</p>
+                
+                <h3>Was ist Entropie?</h3>
+                <p>Entropie (S) ist ein Maß für die Unordnung eines Systems und die Anzahl der möglichen Mikrozustände, die einem Makrozustand entsprechen. Die Einheit der Entropie ist Joule pro Kelvin (J/K).</p>
+                
+                <p>Die Entropieänderung ΔS bei einem Prozess berechnet sich nach:</p>
+                <p style="text-align: center; font-size: 1.2em;">ΔS = Q<sub>rev</sub> / T</p>
+                <p>wobei Q<sub>rev</sub> die bei reversibler Prozessführung ausgetauschte Wärme und T die absolute Temperatur ist.</p>
+                
+                <h3>Warum Kühlung für Wärmekraftwerke notwendig ist</h3>
+                <p>Aus physikalischer Sicht ist Kühlung aus zwei Hauptgründen notwendig:</p>
+                
+                <ol>
+                    <li><strong>Zweiter Hauptsatz der Thermodynamik:</strong> 
+                        <p>Nach dem zweiten Hauptsatz kann Wärme nur dann in Arbeit umgewandelt werden, wenn ein Temperaturunterschied vorliegt. Die Kühlung schafft das notwendige Temperaturgefälle zwischen Wärmequelle (z.B. Dampf) und Wärmesenke (Kühlwasser).</p>
+                        <p style="text-align: center;">η = 1 - T<sub>kalt</sub>/T<sub>warm</sub></p>
+                        <p>wobei η der maximale Wirkungsgrad ist, T<sub>kalt</sub> die Temperatur der Kühlung und T<sub>warm</sub> die Temperatur der Wärmequelle.</p>
+                    </li>
+                    <li><strong>Entropieerzeugung:</strong>
+                        <p>Bei jeder Energieumwandlung entsteht Entropie. Die Kühlung ermöglicht die Abfuhr dieser Entropie aus dem System. Ohne Kühlung würde die Entropie im System anwachsen, bis kein nutzbarer Temperaturunterschied mehr vorhanden wäre.</p>
+                    </li>
+                </ol>
+                
+                <h3>Was passieren würde ohne Kühlung?</h3>
+                <ul>
+                    <li>Der Wirkungsgrad würde gegen Null gehen, da kein Temperaturgefälle mehr vorhanden wäre</li>
+                    <li>Die Turbinen könnten nicht mehr betrieben werden, da der Dampf nicht mehr kondensieren würde</li>
+                    <li>Die Anlage würde überhitzen und schwerwiegende Schäden erleiden</li>
+                    <li>Die Entropie im System würde unkontrolliert ansteigen</li>
+                </ul>
+                
+                <p>Typische Wirkungsgrade von Wärmekraftwerken liegen zwischen 30% und 60%, abhängig von der Technologie. Der Rest der Energie geht als Abwärme verloren, was eine direkte Konsequenz des zweiten Hauptsatzes der Thermodynamik und der Entropieerzeugung ist.</p>
+                
+                <h3>Entropie im Alltag</h3>
+                <p>Entropie ist nicht nur in Kraftwerken wichtig, sondern überall in unserem Alltag spürbar:</p>
+                
+                <ul>
+                    <li><strong>Kühlschrank:</strong> Arbeitet gegen die natürliche Entropiezunahme, indem er Wärme aus dem kälteren Innenraum in die wärmere Umgebung pumpt (verbraucht dabei Energie)</li>
+                    <li><strong>Zimmer aufräumen:</strong> Unordnung (Entropie) nimmt von selbst zu - Aufräumen erfordert Energie</li>
+                    <li><strong>Wärmeleitung:</strong> Wärme fließt immer von warm nach kalt, nie umgekehrt (Entropiezunahme)</li>
+                    <li><strong>Lebensprozesse:</strong> Organismen halten ihre Entropie niedrig, indem sie Energie aufnehmen und Entropie an die Umwelt abgeben</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Energieträger & -quellen -->
+        <section id="energy-sources" class="section">
+            <div class="card">
+                <h2>Energieträger & -quellen</h2>
+                <p>Energiequellen lassen sich nach verschiedenen Kriterien einteilen. Zwei wichtige Unterscheidungen sind Primär- vs. Sekundärenergie und regenerative vs. nicht-regenerative Energiequellen.</p>
+                
+                <h3>Primär- vs. Sekundärenergie</h3>
+                <ul>
+                    <li><strong>Primärenergie:</strong> Energie, die in der Natur vorkommt und noch nicht umgewandelt wurde (z.B. Kohle, Erdöl, Sonnenstrahlung, Wind)</li>
+                    <li><strong>Sekundärenergie:</strong> Aus Primärenergie gewandelte Energieformen (z.B. Strom, Benzin, Fernwärme)</li>
+                </ul>
+                
+                <h3>Regenerative vs. nicht-regenerative Energiequellen</h3>
+                <ul>
+                    <li><strong>Regenerativ (erneuerbar):</strong> Energiequellen, die sich kurzfristig erneuern oder praktisch unerschöpflich sind (z.B. Sonne, Wind, Wasserkraft, Biomasse)</li>
+                    <li><strong>Nicht-regenerativ:</strong> Energiequellen, die nur begrenzt vorhanden sind und sich nicht in menschlichen Zeiträumen erneuern (z.B. Kohle, Erdöl, Erdgas, Uran)</li>
+                </ul>
+                
+                <h3>Fossile Energieträger</h3>
+                <p>Kohle, Erdöl, Erdgas</p>
+                <p>Nicht-regenerativ</p>
+                <p>Vorteile: Hohe Energiedichte, gut speicherbar</p>
+                <p>Nachteile: CO2-Emissionen, begrenzte Vorräte</p>
+                
+                <h3>Kernenergie</h3>
+                <p>Uran, Plutonium</p>
+                <p>Nicht-regenerativ</p>
+                <p>Vorteile: Keine CO2-Emissionen, hohe Energiedichte</p>
+                <p>Nachteile: Radioaktiver Abfall, Sicherheitsrisiken</p>
+                
+                <h3>Sonnenenergie</h3>
+                <p>Photovoltaik, Solarthermie</p>
+                <p>Regenerativ</p>
+                <p>Vorteile: Unerschöpflich, keine Emissionen</p>
+                <p>Nachteile: Fluktuierend, benötigt große Flächen</p>
+                
+                <h3>Windenergie</h3>
+                <p>Onshore, Offshore</p>
+                <p>Regenerativ</p>
+                <p>Vorteile: Geringe Betriebskosten, keine Emissionen</p>
+                <p>Nachteile: Fluktuierend, Landschaftsveränderung</p>
+                
+                <h3>Wasserkraft</h3>
+                <p>Laufwasser, Speicherkraftwerke</p>
+                <p>Regenerativ</p>
+                <p>Vorteile: Regelbar, hoher Wirkungsgrad</p>
+                <p>Nachteile: Eingriffe in Ökosysteme</p>
+                
+                <h3>Biomasse</h3>
+                <p>Holz, Biogas, Bioethanol</p>
+                <p>Regenerativ</p>
+                <p>Vorteile: Speicherbar, vielseitig nutzbar</p>
+                <p>Nachteile: Konkurrenz zu Nahrungsmitteln</p>
+                
+                <h3>Infrastruktur der Energieversorgung in Europa</h3>
+                <p>Die europäische Energieinfrastruktur umfasst:</p>
+                <ul>
+                    <li><strong>Stromnetze:</strong> Hochspannungs-Gleichstrom-Übertragung (HGÜ), Wechselstromnetze</li>
+                    <li><strong>Pipelines:</strong> Für Erdgas, Erdöl und Produkte</li>
+                    <li><strong>Speicher:</strong> Pumpspeicherkraftwerke, Gasspeicher</li>
+                    <li><strong>Kraftwerke:</strong> Verteilt über den Kontinent</li>
+                </ul>
+                
+                <h4>Zeitliche Entwicklung</h4>
+                <ul>
+                    <li><strong>1950-1970:</strong> Nationale Netze, starke Abhängigkeit von Kohle</li>
+                    <li><strong>1970-1990:</strong> Ausbau der Erdgasinfrastruktur, erste grenzüberschreitende Verbindungen</li>
+                    <li><strong>1990-2010:</strong> Liberalisierung der Märkte, verstärkter internationaler Stromhandel</li>
+                    <li><strong>2010-heute:</strong> Integration erneuerbarer Energien, Smart Grids, europäischer Energiebinnenmarkt</li>
+                </ul>
+                
+                <h3>Übergang zu erneuerbaren Energien: China</h3>
+                <p>China hat in den letzten Jahren massive Investitionen in erneuerbare Energien getätigt:</p>
+                <ul>
+                    <li>Weltweit führend in installierter Wind- und Solarkapazität</li>
+                    <li>Ausbau der Wasserkraft (z.B. Drei-Schluchten-Damm)</li>
+                    <li>Gleichzeitig weiterhin starke Abhängigkeit von Kohle</li>
+                    <li>Ambitionierte Ziele für CO2-Neutralität (vor 2060)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Energiedörfer -->
+        <section id="energy-village" class="section">
+            <div class="card">
+                <h2>Energiedörfer: Lokale Energiewende</h2>
+                <p>Energiedörfer sind Gemeinden, die ihren Energiebedarf weitgehend oder vollständig aus lokalen, erneuerbaren Quellen decken. Sie zeigen, wie die Energiewende auf lokaler Ebene funktionieren kann.</p>
+                
+                <h3>Wildpoldsried - Ein Vorreiter in Deutschland</h3>
+                <p>Wildpoldsried, ein Dorf im Allgäu mit etwa 2.600 Einwohnern, hat sich zu einem international beachteten Modell für dezentrale Energieversorgung entwickelt.</p>
+                
+                <h4>Maßnahmen in Wildpoldsried:</h4>
+                <ul>
+                    <li><strong>Windenergie:</strong> 9 Windräder mit insgesamt 15 MW Leistung</li>
+                    <li><strong>Photovoltaik:</strong> Über 4.700 m² Solarpaneele auf öffentlichen und privaten Gebäuden</li>
+                    <li><strong>Biomasse:</strong> Biogasanlagen, die aus landwirtschaftlichen Abfällen Energie gewinnen</li>
+                    <li><strong>Wasserkraft:</strong> Nutzung kleiner lokaler Wasserläufe</li>
+                    <li><strong>Energieeffizienz:</strong> Sanierung von Gebäuden, LED-Beleuchtung, intelligente Netze</li>
+                </ul>
+                
+                <p>Ergebnis: Wildpoldsried produziert etwa 500% seines eigenen Strombedarfs und exportiert den Überschuss. Bei der Wärmeversorgung liegt die Autarkie bei etwa 75%.</p>
+                
+                <h3>Geographische Gegebenheiten</h3>
+                <p>Wildpoldsried profitiert von:</p>
+                <ul>
+                    <li>Günstigen Windverhältnissen in der hügeligen Voralpenlandschaft</li>
+                    <li>Viel Sonnenschein im Allgäu</li>
+                    <li>Starker landwirtschaftlicher Prägung (Biomasse)</li>
+                    <li>Engagierter Bürgerschaft und politischem Willen</li>
+                </ul>
+                
+                <h3>Ein weiteres Beispiel: Samsø (Dänemark)</h3>
+                <p>Die dänische Insel Samsø mit etwa 3.700 Einwohnern hat sich seit 1997 zu einem 100% erneuerbaren Energiesystem entwickelt.</p>
+                
+                <h4>Maßnahmen auf Samsø:</h4>
+                <ul>
+                    <li>11 Onshore- und 10 Offshore-Windkraftanlagen</li>
+                    <li>Solarthermie und Biomasse für die Wärmeversorgung</li>
+                    <li>Strohheizung für öffentliche Gebäude</li>
+                    <li>Elektrofahrzeuge und Biogas für den Verkehr</li>
+                </ul>
+                
+                <h4>Geographische Besonderheiten:</h4>
+                <ul>
+                    <li>Insel mit starken und konstanten Winden</li>
+                    <li>Flaches Gelände ideal für Windkraft</li>
+                    <li>Kleine, überschaubare Gemeinschaft</li>
+                    <li>Starke Identifikation der Bewohner mit dem Projekt</li>
+                </ul>
+                
+                <h4>Möglichkeiten für ein Energiedorf:</h4>
+                <ul>
+                    <li><strong>Windkraft:</strong> Besonders effektiv in windreichen Regionen</li>
+                    <li><strong>Photovoltaik:</strong> Auf Dächern, Freiflächen oder als Agri-PV</li>
+                    <li><strong>Biomasse:</strong> Nutzung von landwirtschaftlichen Abfällen und Energiepflanzen</li>
+                    <li><strong>Wasserkraft:</strong> Wo möglich, auch kleine Anlagen</li>
+                    <li><strong>Geothermie:</strong> In geeigneten geologischen Regionen</li>
+                    <li><strong>Energiespeicher:</strong> Batterien, Power-to-Gas, Wärmespeicher</li>
+                    <li><strong>Energieeffizienz:</strong> Gebäudesanierung, Wärmerückgewinnung</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Persönlicher Energiebedarf -->
+        <section id="personal-energy" class="section">
+            <div class="card">
+                <h2>Persönlicher Energiebedarf</h2>
+                <p>Jeder von uns verbraucht täglich Energie - direkt durch Stromnutzung und indirekt durch Konsum und Mobilität. Der durchschnittliche Energiebedarf in Deutschland liegt bei etwa 120 kWh pro Person und Tag.</p>
+                
+                <h3>Typische Energieverbräuche</h3>
+                
+                <h4>Energiefresser im Alltag:</h4>
+                <ul>
+                    <li><strong>Heizung:</strong> 50-70% des häuslichen Energieverbrauchs</li>
+                    <li><strong>Auto:</strong> 10-20 kWh pro 100 km (abhängig vom Modell)</li>
+                    <li><strong>Flugreisen:</strong> 30-50 kWh pro 100 km und Person</li>
+                    <li><strong>Elektronik:</strong> Standby-Verbräuche addieren sich</li>
+                </ul>
+                
+                <h4>Übersehene Energieverbräuche:</h4>
+                <ul>
+                    <li><strong>Lebensmittelproduktion:</strong> Besonders Fleisch und importierte Waren</li>
+                    <li><strong>Konsumgüter:</strong> Herstellung von Kleidung, Elektronik etc.</li>
+                    <li><strong>Warmwasser:</strong> Duschen, Baden, Geschirrspülen</li>
+                    <li><strong>Datenverkehr:</strong> Streaming, Cloud-Speicher</li>
+                </ul>
+                
+                <h3>"Licht oder Ladegeräte im Winter auszuschalten ist nicht nötig, da die umgewandelte Energie meine Wohnung heizt."</h3>
+                <p>Diese Aussage ist <strong>teilweise richtig, aber irreführend</strong>:</p>
+                <ul>
+                    <li><strong>Richtig ist:</strong> Die "verlorene" Energie von elektrischen Geräten wird letztlich in Wärme umgewandelt und heizt tatsächlich den Raum.</li>
+                    <li><strong>Problematisch ist:</strong>
+                        <ul>
+                            <li>Elektrische Heizung ist sehr ineffizient (Wirkungsgrad ca. 30% vom Kraftwerk bis zur Steckdose)</li>
+                            <li>Gezieltes Heizen mit einer Wärmepumpe oder Fernwärme ist viel effizienter</li>
+                            <li>Standby-Geräte erzeugen oft Wärme an ungeeigneten Stellen (z.B. hinter Schränken)</li>
+                            <li>Im Sommer führt dies zu zusätzlichem Kühlbedarf</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Fazit:</strong> Auch im Winter sollte man Geräte ausschalten und lieber gezielt und effizient heizen.</p>
+                
+                <h3>Die 5 häufigsten Geräte im Haushalt und ihr Energieanteil</h3>
+                <p>1. Kühlschrank: 25%</p>
+                <p>2. Heizungspumpe: 20%</p>
+                <p>3. Waschmaschine: 15%</p>
+                <p>4. Fernseher: 15%</p>
+                <p>5. Computer: 10%</p>
+                
+                <h3>Berechnen Sie Ihren persönlichen Energiebedarf</h3>
+                <p>Der durchschnittliche Energiebedarf in Deutschland liegt bei etwa 120 kWh pro Person und Tag. Dieser setzt sich zusammen aus:</p>
+                <ul>
+                    <li>Heizung: 30 kWh/Tag</li>
+                    <li>Strom: 5 kWh/Tag</li>
+                    <li>Transport: 6 kWh/Tag (bei 20 km/Tag)</li>
+                    <li>Ernährung: 20 kWh/Tag (mittlerer Fleischkonsum)</li>
+                    <li>Konsum: 25 kWh/Tag (mittleres Konsumverhalten)</li>
+                </ul>
+                
+                <h3>Energiespartipps</h3>
+                <ul>
+                    <li><strong>Heizen:</strong> Temperatur um 1°C senken spart etwa 6% Energie</li>
+                    <li><strong>Beleuchtung:</strong> LED-Lampen verbrauchen 80% weniger als Glühbirnen</li>
+                    <li><strong>Mobilität:</strong> ÖPNV, Fahrrad oder Carsharing nutzen</li>
+                    <li><strong>Strom:</strong> Geräte ganz ausschalten, nicht im Standby lassen</li>
+                    <li><strong>Ernährung:</strong> Mehr pflanzliche, regionale und saisonale Produkte</li>
+                    <li><strong>Konsum:</strong> Langlebige Produkte kaufen, reparieren statt ersetzen</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>Quellen</h3>
+            <ul>
+                <li>Bundesministerium für Wirtschaft und Energie (2023): Energiedaten</li>
+                <li>International Energy Agency (IEA): World Energy Balances</li>
+                <li>Umweltbundesamt (2023): Daten zur Umwelt</li>
+                <li>Wikipedia: Artikel zu Entropie, Wärmekraftwerken, Energieträgern</li>
+                <li>Gemeinde Wildpoldsried: Energiekonzept</li>
+                <li>Samsø Energiakademi: Nachhaltigkeitsberichte</li>
+                <li>Bildquellen: Wikimedia Commons, Unsplash (wie im Text angegeben)</li>
+            </ul>
+            <p>&copy; 2023 Energieversorgung Projektwebsite. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSection = link.getAttribute('data-section');
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Show target section
+                document.getElementById(targetSection).classList.add('active');
+                
+                // Update active nav link
+                navLinks.forEach(navLink => {
+                    navLink.style.fontWeight = 'normal';
+                });
+                link.style.fontWeight = 'bold';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+</body>
+</html>
